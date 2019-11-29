@@ -2,14 +2,18 @@
 
 size_t    ft_strlcpy(char *dst, const char *src, size_t len_dst)
 {
-  i = 0;
+  
+	j = 0;
+	i = 0;
+	while (src[j] != '\0')
+		j++;
 	while (src[i] != '\0' && i < (size - 1))
 	{
 		dest[i] = src[i];
 		++i;
 	}
 	dest[i] = '\0';
-	return (strlen(src));
+	return (j);
 }
 
 #include <string.h>
