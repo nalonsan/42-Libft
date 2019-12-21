@@ -1,32 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   main_ft_split.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nalonso- <nalonso-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/11/07 15:39:41 by nalonso-          #+#    #+#             */
-/*   Updated: 2019/12/21 08:56:16 by nalonso-         ###   ########.fr       */
+/*   Created: 2019/12/20 07:13:15 by nalonso-          #+#    #+#             */
+/*   Updated: 2019/12/20 07:14:36 by nalonso-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+include "libft.h"
 
-void	*ft_memcpy(void *dst, const void *src, size_t n)
+char    **ft_split(char const *s, char c);
+
+int main()
 {
-	unsigned char		*a;
-	unsigned char		*b;
-	size_t				i;
-
-	a = (unsigned char *)dst;
-	b = (unsigned char *)src;
-	i = 0;
-	if (!dst && !src)
-		return (NULL);
-	while (i < n)
-	{
-		a[i] = b[i];
-		i++;
-	}
-	return (dst);
+    char s[] = "";
+    char c = ;
+    printf("%s\n", ft_split(char const *s, char c));
+    return (0);
 }

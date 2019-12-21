@@ -1,32 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   main_ft_putnbr_fd.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nalonso- <nalonso-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/11/07 15:39:41 by nalonso-          #+#    #+#             */
-/*   Updated: 2019/12/21 08:56:16 by nalonso-         ###   ########.fr       */
+/*   Created: 2019/12/17 08:56:24 by nalonso-          #+#    #+#             */
+/*   Updated: 2019/12/19 08:15:15 by nalonso-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memcpy(void *dst, const void *src, size_t n)
-{
-	unsigned char		*a;
-	unsigned char		*b;
-	size_t				i;
+void    ft_putnbr_fd(int n, int fd);
 
-	a = (unsigned char *)dst;
-	b = (unsigned char *)src;
-	i = 0;
-	if (!dst && !src)
-		return (NULL);
-	while (i < n)
-	{
-		a[i] = b[i];
-		i++;
-	}
-	return (dst);
+int main()
+{
+    int n = 58;
+    int fd = 2;
+    ft_putnbr_fd(n, fd);
 }

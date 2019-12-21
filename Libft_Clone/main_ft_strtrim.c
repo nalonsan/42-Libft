@@ -1,32 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   main_ft_strtrim.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nalonso- <nalonso-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/11/07 15:39:41 by nalonso-          #+#    #+#             */
-/*   Updated: 2019/12/21 08:56:16 by nalonso-         ###   ########.fr       */
+/*   Created: 2019/12/18 06:55:27 by nalonso-          #+#    #+#             */
+/*   Updated: 2019/12/18 08:17:45 by nalonso-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memcpy(void *dst, const void *src, size_t n)
-{
-	unsigned char		*a;
-	unsigned char		*b;
-	size_t				i;
+char    *ft_strtrim(char const *s1, char const *set);
 
-	a = (unsigned char *)dst;
-	b = (unsigned char *)src;
-	i = 0;
-	if (!dst && !src)
-		return (NULL);
-	while (i < n)
-	{
-		a[i] = b[i];
-		i++;
-	}
-	return (dst);
+int main()
+{
+    char const s1[] = "dfghjjugkl";
+    char const set[] = "jug";
+    printf("%s\n", ft_strjoin(s1, set));
+    return (0);
 }

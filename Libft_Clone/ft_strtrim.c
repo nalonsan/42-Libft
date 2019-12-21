@@ -1,32 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nalonso- <nalonso-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/11/07 15:39:41 by nalonso-          #+#    #+#             */
-/*   Updated: 2019/12/21 08:56:16 by nalonso-         ###   ########.fr       */
+/*   Created: 2019/12/18 06:55:11 by nalonso-          #+#    #+#             */
+/*   Updated: 2019/12/20 07:09:29 by nalonso-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memcpy(void *dst, const void *src, size_t n)
+char	*ft_strtrim(char const *s1, char const *set)
 {
-	unsigned char		*a;
-	unsigned char		*b;
-	size_t				i;
+	size_t	start;
+	size_t	len;
 
-	a = (unsigned char *)dst;
-	b = (unsigned char *)src;
-	i = 0;
-	if (!dst && !src)
+	if (s1 == NULL || set == NULL)
 		return (NULL);
-	while (i < n)
-	{
-		a[i] = b[i];
-		i++;
-	}
-	return (dst);
+	start = 0;
+	while (s1[start] && ft_strchr(set, s1[start]) != NULL)
+		start++;
+	len = ft_strlen(&s1[start]);
+	if (len != 0)
+		while (s1[start + len - 1] &&
+				ft_strchr(set, s1[start + len - 1]) != NULL)
+			len--;
+	return (ft_substr(s1, start, len));
 }

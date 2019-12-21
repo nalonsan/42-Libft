@@ -6,14 +6,23 @@
 /*   By: nalonso- <nalonso-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/16 18:58:46 by nalonso-          #+#    #+#             */
-/*   Updated: 2019/12/16 19:19:16 by nalonso-         ###   ########.fr       */
+/*   Updated: 2019/12/17 08:11:13 by nalonso-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void    ft_putstr_fd(char *s, int fd)
+void	ft_putstr_fd(char *s, int fd)
 {
-    while (*s)
-        write(1, s++, fd);
+	int i;
+
+	i = 0;
+	if (s != 0)
+	{
+		while (s[i] != '\0')
+		{
+			write(fd, s + i, 1);
+			i++;
+		}
+	}
 }

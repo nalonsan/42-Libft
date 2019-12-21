@@ -6,30 +6,30 @@
 /*   By: nalonso- <nalonso-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/18 13:29:51 by nalonso-          #+#    #+#             */
-/*   Updated: 2019/11/28 07:34:38 by nalonso-         ###   ########.fr       */
+/*   Updated: 2019/12/19 08:46:06 by nalonso-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_atoi(const char *s)
+int		ft_atoi(const char *str)
 {
 	int num;
 	int sign;
 
 	num = 0;
 	sign = +1;
-	while (*s == '\r' || *s == '\t' || *s == '\v' ||
-			*s == '\f' || *s == '\n' || *s == ' ')
-		++s;
-	if (*s == '-')
+	while (*str == '\r' || *str == '\t' || *str == '\v' ||
+			*str == '\f' || *str == '\n' || *str == ' ')
+		++str;
+	if (*str == '-')
 		sign = -1;
-	if (*s == '-' || *s == '+')
-		++s;
-	while (*s >= '0' && *s <= '9')
+	if (*str == '-' || *str == '+')
+		++str;
+	while (*str >= '0' && *str <= '9')
 	{
-		num = num * 10 + *s - '0';
-		++s;
+		num = num * 10 + *str - '0';
+		++str;
 	}
 	return (num * sign);
 }

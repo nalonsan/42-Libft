@@ -6,17 +6,17 @@
 /*   By: nalonso- <nalonso-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/07 14:18:32 by nalonso-          #+#    #+#             */
-/*   Updated: 2019/11/21 11:55:07 by nalonso-         ###   ########.fr       */
+/*   Updated: 2019/12/19 08:23:14 by nalonso-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_bzero(void *str, size_t n)
+void	ft_bzero(void *s, size_t n)
 {
 	char *i;
 
-	i = str;
+	i = s;
 	while (n > 0)
 	{
 		*i = 0;
